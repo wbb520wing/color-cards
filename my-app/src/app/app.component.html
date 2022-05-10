@@ -1,0 +1,27 @@
+
+<div class="d-flex justify-content-center">
+  <div class="w-75">
+    <h1 class="mt-5 mb-5" [style.color]="originColor">
+      Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+      consectetur, adipisci velit...
+    </h1>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <app-cards
+            *ngFor="let color of colors"
+            [btncolor]="color"
+            [style.background-color]="color"
+            [bgcolor]="color"
+            (colorChange)="colorChange(color)"
+          ></app-cards>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<router-outlet></router-outlet>
